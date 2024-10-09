@@ -61,6 +61,7 @@ max_date_days = days["dteday"].max()
 min_date_hour = hours["dteday"].min()
 max_date_hour = hours["dteday"].max()
 
+
 with st.sidebar:
     # Menambahkan logo perusahaan
     st.image("mountain-bike-4297972_1280.jpg")
