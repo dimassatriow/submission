@@ -41,8 +41,8 @@ def macem_season (day):
     season = day.groupby(by="season").count_cr.sum().reset_index() 
     return season
 
-days = pd.read_csv("day_clean.csv")
-hours = pd.read_csv("hour_clean.csv")
+days = pd.read_csv("dashboard/day_clean.csv")
+hours = pd.read_csv("dashboard/hour_clean.csv")
 
 datetime_columns = ["dteday"]
 days.sort_values(by="dteday", inplace=True)
@@ -63,7 +63,7 @@ max_date_hour = hours["dteday"].max()
 
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("mountain-bike-4297972_1280.jpg")
+    st.image("dashboard/mountain-bike-4297972_1280.jpg")
     
         # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
